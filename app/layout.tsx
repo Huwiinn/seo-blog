@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import "./globals.css";
 import { navItems } from "./site-data";
 import localFont from "next/font/local";
 import Gtm from "@/components/third-party-script/Gtm";
+import { staticWebsiteMetaData } from "@/metadata/staticMetadata";
+import { seoData } from "@/constant";
 
 const pretendard = localFont({
   src: "./fonts/PretendardStdVariable.woff2",
@@ -12,11 +13,13 @@ const pretendard = localFont({
   variable: "--font-pretendard",
 });
 
-export const metadata: Metadata = {
-  title: "SEO Lab | HI",
-  description:
-    "테크니컬 SEO, 콘텐츠 SEO, 마케팅 용어, Google Analytics 정보를 공유합니다.",
-};
+const mainMetadata = staticWebsiteMetaData({
+  robots: true,
+  path: "",
+  description: seoData.common.description,
+});
+
+export const metadata: Metadata = mainMetadata;
 
 export default function RootLayout({
   children,
