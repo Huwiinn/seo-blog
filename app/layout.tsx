@@ -6,6 +6,7 @@ import localFont from "next/font/local";
 import Gtm from "@/components/third-party-script/Gtm";
 import { staticWebsiteMetaData } from "@/metadata/staticMetadata";
 import { seoData } from "@/constant";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const pretendard = localFont({
   src: "./fonts/PretendardStdVariable.woff2",
@@ -28,8 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      {/* GA script */}
-      <Gtm id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID as string} />
+      <GoogleTagManager
+        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as string}
+      />
       <html lang="ko">
         <body className={`${pretendard.variable} antialiased`}>
           <div className="site-shell">

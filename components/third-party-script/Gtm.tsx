@@ -1,20 +1,5 @@
-import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function Gtm({ id }: { id: string }) {
-  return (
-    <>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
-        strategy="afterInteractive"
-      />
-      <Script id="gtag-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${id}');
-        `}
-      </Script>
-    </>
-  );
+  return <GoogleTagManager gtmId={id} />;
 }
