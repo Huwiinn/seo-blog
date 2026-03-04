@@ -3,7 +3,6 @@ import Link from "next/link";
 import "./globals.css";
 import { navItems } from "./site-data";
 import localFont from "next/font/local";
-import Gtm from "@/components/third-party-script/Gtm";
 import { staticWebsiteMetaData } from "@/metadata/staticMetadata";
 import { seoData } from "@/constant";
 import { GoogleTagManager } from "@next/third-parties/google";
