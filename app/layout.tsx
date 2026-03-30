@@ -50,6 +50,12 @@ export default function RootLayout({
                       {item.title}
                     </Link>
                   ))}
+                  {/* <Link
+                    href="/admin/write"
+                    className="ml-4 rounded-lg bg-[var(--accent)] px-4 py-1.5 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+                  >
+                    글쓰기
+                  </Link> */}
                 </nav>
               </div>
             </header>

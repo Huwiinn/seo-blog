@@ -10,6 +10,13 @@
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",
+    "@supabase/supabase-js": "^2.98.0",
+    "@tiptap/extension-placeholder": "^3.20.0",
+    "@tiptap/pm": "^3.20.0",
+    "@tiptap/react": "^3.20.0",
+    "@tiptap/starter-kit": "^3.20.0",
+    "@types/marked": "^5.0.2",
+    "marked": "^17.0.4",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
