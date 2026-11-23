@@ -1,0 +1,2 @@
+# SQLite DB는 바이너리로 다룬다(텍스트 diff·줄바꿈 변환 금지).
+data/*.db binary
