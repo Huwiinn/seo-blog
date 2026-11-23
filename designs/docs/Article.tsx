@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArticleSections } from "@/components/post/ArticleSections";
 import { PostDate } from "@/components/post/PostDate";
+import { PreferredSourceLink } from "@/components/post/PreferredSourceLink";
 import { TocList } from "@/components/post/Toc";
 import { TocSpy } from "@/components/post/TocSpy";
 import { getCategory } from "@/constant";
@@ -50,6 +51,7 @@ export function Article({ links, post, previous, next }: ArticleProps) {
           )}
           {" · "}읽는 시간 {post.readingMinutes}분
         </p>
+        <PreferredSourceLink className="docs-preferred-source" />
 
         {post.summary && (
           <div className="docs-callout" role="note" aria-label="핵심 요약">
