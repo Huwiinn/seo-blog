@@ -457,6 +457,42 @@
   color: var(--ink-3);
   font-size: 14px;
 }
+.docs-preferred-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 8px 16px 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--canvas);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+  transition:
+    border-color 0.2s var(--ease),
+    background-color 0.2s var(--ease);
+}
+.docs-preferred-source svg {
+  flex: none;
+  color: #fbbc04;
+}
+.docs-preferred-source .preferred-source__brand {
+  color: var(--link);
+}
+.docs-preferred-source:hover {
+  border-color: var(--ink-3);
+  background: var(--canvas-2);
+}
+.docs-preferred-source:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.docs-preferred-source + .docs-callout {
+  margin-top: 22px;
+}
 .docs-callout {
   margin: 28px 0 36px;
   padding: 18px 22px;
